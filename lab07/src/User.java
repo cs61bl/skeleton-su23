@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Objects;
 
+/** Represents an example of how a website might model a user. */
 public class User {
 
     private static int nextId = 1;
@@ -54,9 +55,10 @@ public class User {
 
     @Override
     public String toString() {
-        return "src.User{" + "id=" + id + ", name=" + name + ", email=" + email + "}";
+        return "User{" + "id=" + id + ", name=" + name + ", email=" + email + "}";
     }
 
+    /** Returns whether or not two Users are considered equal to each other. */
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -77,11 +79,11 @@ public class User {
 
     public static void main(String[] args) {
         User[] users = {
-            new User(2, "Jedi", ""),
-            new User(4, "Zoe", ""),
-            new User(5, "Allyson", ""),
-            new User(1, "Sohum", ""),
-            new User(1, "Nandini", "")
+            new User(2, "Jasmine", ""),
+            new User(4, "Vanessa", ""),
+            new User(5, "David", ""),
+            new User(1, "Jedi", ""),
+            new User(1, "Laksith", "")
         };
         Arrays.sort(users);
         for (User user : users) {
@@ -89,3 +91,4 @@ public class User {
         }
     }
 }
+
