@@ -28,8 +28,6 @@ public class TETile {
     private final String description;
     private final String filepath;
 
-    private final TileType tileType;
-
     /**
      * Full constructor for TETile objects.
      * @param character The character displayed on the screen.
@@ -37,16 +35,14 @@ public class TETile {
      * @param backgroundColor The color drawn behind the character.
      * @param description The description of the tile, shown in the GUI on hovering over the tile.
      * @param filepath Full path to image to be used for this tile. Must be correct size (16x16)
-     * @param tileType TODO
      */
     public TETile(char character, Color textColor, Color backgroundColor, String description,
-                  String filepath, TileType tileType) {
+                  String filepath) {
         this.character = character;
         this.textColor = textColor;
         this.backgroundColor = backgroundColor;
         this.description = description;
         this.filepath = filepath;
-        this.tileType = tileType;
     }
 
     /**
@@ -57,13 +53,12 @@ public class TETile {
      * @param backgroundColor The color drawn behind the character.
      * @param description The description of the tile, shown in the GUI on hovering over the tile.
      */
-    public TETile(char character, Color textColor, Color backgroundColor, String description, TileType tileType) {
+    public TETile(char character, Color textColor, Color backgroundColor, String description) {
         this.character = character;
         this.textColor = textColor;
         this.backgroundColor = backgroundColor;
         this.description = description;
         this.filepath = null;
-        this.tileType = tileType;
     }
 
     /**
@@ -72,7 +67,7 @@ public class TETile {
      * @param textColor foreground color for tile copy
      */
     public TETile(TETile t, Color textColor) {
-        this(t.character, textColor, t.backgroundColor, t.description, t.filepath, t.tileType);
+        this(t.character, textColor, t.backgroundColor, t.description, t.filepath);
     }
 
 
@@ -193,9 +188,5 @@ public class TETile {
         }
 
         return copy;
-    }
-
-    enum TileType {
-        FLOOR, WALL, VOID, MISC;
     }
 }
