@@ -22,7 +22,7 @@ public class HeapSort {
     /**
      * @param arr
      *
-     * Turn the array into a heap. Repeatedly calls bubble down each element,
+     * Turn the array into a heap. Repeatedly calls bubble down on each element,
      * starting from the end of the array.
      *
      * Suggested helper method that will make it easier for you to implement heap sort.
